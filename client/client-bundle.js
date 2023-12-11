@@ -141,12 +141,13 @@ function PropertyInfoPlugin(
 
   function getScoreText(score) {
     const scoreTexts = ["-", "A", "B", "C", "D"];
+    // return '';
     return scoreTexts[score] || scoreTexts[0];
   }
 
   function addBadge(element, score, position) {
     console.log("addBadge", element, score, position);
-    const badgeHtml = `<div class="badge ${`badge-${score}`}" data-badge="${getScoreText(score)}"></div>`;
+    const badgeHtml = `<div class="badge large ${`badge-${score}`}" data-badge="${getScoreText(score)}"></div>`;
     const badgeOverlay = overlays.add(element, "badge", {
       position,
       html: badgeHtml,
@@ -165,7 +166,7 @@ function PropertyInfoPlugin(
     const scores = getScores(element);
     addBadge(element, scores.business, {
       top: 0,
-      right: 0 + 33,
+      right: 0 + 36,
     });
     addBadge(element, scores.it, {
       top: 0,
