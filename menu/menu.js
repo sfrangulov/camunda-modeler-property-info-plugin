@@ -31,6 +31,16 @@ module.exports = function(electronApp, menuState) {
             action: function() {
                 electronApp.emit('menu:action', 'toggleIdOverlays');
             }
-        }
+        },
+        {
+            label: 'Toggle Scores',
+            accelerator: 'Alt+S',
+            enabled: function() {
+                return menuState.bpmn;
+            },
+            action: function() {
+                electronApp.emit('menu:action', 'toggleScoreOverlays');
+            }
+        },
     ];
 };

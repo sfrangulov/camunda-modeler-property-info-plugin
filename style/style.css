@@ -31,6 +31,26 @@
     background: #D2335C;
 }
 
+.badge-4:after {
+    background: #D2335C;
+}
+
+.badge-3:after {
+    background: #D38C17;
+}
+
+.badge-2:after {
+    background: #FFDE00;
+}
+
+.badge-1:after {
+    background: #04BE5B;
+}
+
+.badge-0:after {
+    background:gray;
+}
+
 .doc-val-true {
     background-color: transparent;
     width: 24px;
